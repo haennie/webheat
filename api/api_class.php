@@ -7,6 +7,7 @@
 		private $current_temp;
 		private $requested_temp;
 		private $humidity;
+        private $oven_status;
 		
 		function request_handler() {
 			
@@ -47,6 +48,30 @@
 			
 			return file_put_contents('therm/therm_values.json', $json_string);
 		}
+
+        function oven_on() {
+
+            shell_exec('gpio -g mode '.OVEN_PIN.' out');
+            shell_exec('gpio -g write '.OVEN_PIN.' 1');
+            $this->oven_status = shell_exec('gpio -g read'.OVEN_PIN);
+
+            $this->save();
+
+            return $this->oven_status;
+
+        }
+
+        function oven_off() {
+
+            shell_exec('gpio -g mode '.OVEN_PIN.' out');
+            shell_exec('gpio -g write '.OVEN_PIN.' 0');
+            $this->oven_status = shell_exec('gpio -g read'.OVEN_PIN);
+
+            $this->save();
+
+            return $this->oven_status;
+
+        }
 	}
 	
 ?>
