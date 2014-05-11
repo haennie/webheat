@@ -53,7 +53,7 @@
 
             shell_exec('gpio -g mode '.OVEN_PIN.' out');
             shell_exec('gpio -g write '.OVEN_PIN.' 1');
-            $this->oven_status = shell_exec('gpio -g read'.OVEN_PIN);
+            $this->oven_status = shell_exec('gpio -g read '.OVEN_PIN);
 
             $this->save();
 
@@ -65,7 +65,7 @@
 
             shell_exec('gpio -g mode '.OVEN_PIN.' out');
             shell_exec('gpio -g write '.OVEN_PIN.' 0');
-            $this->oven_status = shell_exec('gpio -g read'.OVEN_PIN);
+            $this->oven_status = shell_exec('gpio -g read '.OVEN_PIN);
 
             $this->save();
 

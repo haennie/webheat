@@ -1,6 +1,7 @@
 <?php
 	
 	//load include folder
+    require_once 'include/system/config.php';
 	foreach (glob("include/*/*.php") as $path) {
 		require_once $path;
 	}
