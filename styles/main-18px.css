@@ -1,0 +1,173 @@
+/*	Less Framework 4 with 18/24 type presets
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 123px;
+	line-height: 132px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 76px;
+	line-height: 84px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 47px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 29px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 25px;
+	line-height: 30px;
+}
+
+body {
+	font: 18px/24px "Times New Roman", Times, serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+	width: 896px;
+	background: rgb(232,232,232);
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+#temp {
+	display: inline-block;
+}
+
+.wrapper_temp{
+	margin: 20px;
+	vertical-align: top;
+}
+
+input {
+	padding: 5px;
+	margin: 10px;
+}
+input.large_checkbox {
+	width: 50px;
+	height: 50px;
+}
+
+
+.buttons div {
+	background:#ccc;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	display: inline-block;
+	color: #555;
+}
+
+.menu {
+	width: 100%;
+	height: auto;
+	background-color: #555;
+	color: #ddd;
+	padding: 30px;
+	font-size: 70px;
+
+	
+}
+
+.menu_button {
+	font-size: 50px;
+	height: auto;
+}
+.menu_values {
+	margin: 20px 0 0 10px;
+	height: 0;
+	display: none;
+}
+.menu_values p{
+	padding: 20px;	
+}
+a {
+	text-decoration: none;
+	color: rgb(232,232,232);
+
+}
+a:hover {
+	color: #fff;
+}
+.preset_line:nth-child(odd) {
+	background-color: #fff;
+}
+.preset_line {
+	padding: 5px;
+}
+.preset_on {
+	background-color: green;
+}
+.preset_off {
+	background-color: red;
+}
+.active_button {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	float: right;
+}

@@ -1,0 +1,3 @@
+order deny,allow
+Allow from localhost
+deny from all
