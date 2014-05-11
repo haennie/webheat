@@ -9,7 +9,7 @@
 
 $oven_test = new sensor();
 $status = $oven_test->curl_request(array(
-    'function' => 'ove_on'
+    'function' => 'oven_on'
 ));
 
 echo 'Oven is'. $status;
