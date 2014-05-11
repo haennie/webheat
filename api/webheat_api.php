@@ -1,5 +1,6 @@
 <?php
-	
+
+    require_once '../include/service/config.php';
 	require_once 'api_class.php';
 	
 	foreach ($_POST as $key => $value) {
