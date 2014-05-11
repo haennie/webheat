@@ -37,8 +37,9 @@ $lbl_string['LBL_TEMP'] = 'Temperatur';
 $lbl_string_list['LBL_MENU_VALUES'] = array(
     'home' => 'Home',
     'timeclock' => 'Zeitschaltuhr',
+    'test' => 'Test',
     'logout' => 'Logout',
-    
+
 );
 
 

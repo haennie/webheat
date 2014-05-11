@@ -6,6 +6,10 @@
  * Time: 14:31
  */
 
-echo 'test';
 
-//test file
+$oven_test = new sensor();
+$status = $oven_test->curl_request(array(
+    'function' => 'ove_on'
+));
+
+echo 'Oven is'. $status;
