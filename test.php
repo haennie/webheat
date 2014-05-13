@@ -7,6 +7,6 @@
  */
 
 
-$test = shell_exec('sudo /home/pi/programme/lol_dht22/loldht 7');
+$test = shell_exec('/home/pi/programme/lol_dht22/loldht 7');
 
 var_dump($test);
