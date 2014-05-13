@@ -23,9 +23,39 @@ class sensor {
 		
 		return $result;
 	}
-	
-	function curl_request($post_array) {
-		
+
+    function oven_on() {
+
+        $status = curl_request(array(
+            'function' => 'oven_on'
+        ));
+
+        return $status;
+    }
+
+    function oven_off() {
+
+        $status = curl_request(array(
+            'function' => 'oven_off'
+        ));
+
+        return $status;
+    }
+
+    /**
+     * curl_request()
+     *
+     * sends request to webheat api
+     *
+     * $post_array['function'] => defines called function (string)
+     * $post_array['param'] => 'value' for requested values
+     *
+     * @param $post_array
+     * @return mixed
+     */
+
+    function curl_request($post_array) {
+
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
 		    CURLOPT_RETURNTRANSFER => 1,
@@ -35,7 +65,7 @@ class sensor {
 		));
 		$result = curl_exec($curl);
 		curl_close($curl);
-		
+
 		return $result;
 	}
 }
