@@ -72,10 +72,10 @@
             return $this->oven_status;
 
         }
-        function get_sensor_values() {
+        function get_sensor_values() {var_dump('here ma');
             $sensor_string = shell_exec('sudo /home/pi/programme/lol_dht22/loldht '.THERMOMETER_PIN);
             //$sensor_string = "Raspberry Pi wiringPi DHT22 reader www.lolware.net Data not good, skip Humidity = 41.80 % Temperature = 21.50 *C ";
-
+            var_dump('ist_raus');
             $sensor_string =  substr($sensor_string, -32, -5);
             $this->humidity = substr($sensor_string, 0, -21);
             $this->current_temp = substr($sensor_string, -4);
