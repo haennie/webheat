@@ -5,7 +5,7 @@
  * Date: 11.05.14
  * Time: 14:31
  */
-var_dump('aber drinn bin ich');
+var_dump('aber drinn bin ich');die();
 
 $oven_test = new sensor();
 $status = $oven_test->curl_request(array(
