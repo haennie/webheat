@@ -80,7 +80,6 @@
 
             shell_exec('gpio -g mode '.OVEN_PIN.' out');
             $this->oven_status = shell_exec('gpio -g read '.OVEN_PIN);
-            file_put_contents('status.txt', $this->oven_status());
             $this->save();
 
             return $this->oven_status;
