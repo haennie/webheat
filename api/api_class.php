@@ -18,6 +18,8 @@
 			foreach($values as $name => $value) {
 				$this->$name = $value;
 			}
+
+            $this->oven_status();
 			
 		}
 		
@@ -67,6 +69,16 @@
 
             shell_exec('gpio -g mode '.OVEN_PIN.' out');
             shell_exec('gpio -g write '.OVEN_PIN.' 0');
+            $this->oven_status = shell_exec('gpio -g read '.OVEN_PIN);
+
+            $this->save();
+
+            return $this->oven_status;
+
+        }
+        function oven_status() {
+
+            shell_exec('gpio -g mode '.OVEN_PIN.' out');
             $this->oven_status = shell_exec('gpio -g read '.OVEN_PIN);
 
             $this->save();
