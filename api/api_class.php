@@ -79,6 +79,7 @@
             //$sensor_string = "Raspberry Pi wiringPi DHT22 reader www.lolware.net Data not good, skip Humidity = 41.80 % Temperature = 21.50 *C ";
 
             $sensor_string =  substr($sensor_string, -32, -5);
+            return $sensor_string;
             $this->humidity = substr($sensor_string, 0, -21);
             $this->current_temp = substr($sensor_string, -4);
 
