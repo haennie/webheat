@@ -7,6 +7,9 @@
  */
 
 
-$test = shell_exec('sudo /home/pi/programme/lol_dht22/loldht 7');
+$oven_test = new sensor();
+$status = $oven_test->curl_request(array(
+    'function' => 'get_sensor_values'
+));
 
-var_dump($test);
+echo $status;
