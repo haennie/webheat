@@ -1,8 +1,9 @@
 <?php
 
+file_put_contents('est.txt', 'sdf');
+require_once '../include/system/config.php';
 require_once 'api_class.php';
 
-$initialize = new cron_handler();
 
 class cron_handler extends request_handler {
 
@@ -14,4 +15,5 @@ class cron_handler extends request_handler {
     }
 }
 
+$initialize = new cron_handler();
 
