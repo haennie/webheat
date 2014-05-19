@@ -12,7 +12,7 @@
 		function request_handler() {
 			
 			//Read JSON File with Values -> insert in Class
-			$json_values = file_get_contents('therm/therm_values.json');
+			$json_values = $this->get_json_data();
 			$values = json_decode($json_values);
 			
 			foreach($values as $name => $value) {
@@ -38,7 +38,7 @@
 		
 		function get_json_data() {
 			
-			$json_values = file_get_contents('therm/therm_values.json');
+			$json_values = file_get_contents('/var/www/webheat/api/therm/therm_values.json');
 			return $json_values;
 		}
 		function save() {
@@ -49,8 +49,8 @@
 				$array[$key] = $value;
 			}
 			$json_string = json_encode($array);
-			
-			return file_put_contents('therm/therm_values.json', $json_string);
+
+			return file_put_contents('/var/www/webheat/api/therm/therm_values.json', $json_string);
 		}
 
         function oven_on() {
