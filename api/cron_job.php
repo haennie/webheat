@@ -2,8 +2,8 @@
 $handle = fopen('cron_log.txt', 'a');
 fwrite($handle, "PHP File gestartet\n");
 
-require_once '../include/system/config.php';
-require_once 'api_class.php';
+require_once '/var/www/webheat/include/system/config.php';
+require_once '/var/www/webheat/api/api_class.php';
 
 fwrite($handle, "PHP required files loaded\n");
 
