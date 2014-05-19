@@ -31,7 +31,7 @@ class cron_handler extends request_handler {
 
     }
 }
-
+error_log('cronjob ausgeführt');
 $initialize = new cron_handler();
 sleep(30);
 $init_2 = new cron_handler();
