@@ -1,11 +1,11 @@
 <?php
 $handle = fopen('cron_log.txt', 'a');
-fwrite($handle, 'PHP File gestartet\n');
+fwrite($handle, "PHP File gestartet\n");
 
 require_once '../include/system/config.php';
 require_once 'api_class.php';
 
-fwrite($handle, 'PHP required files loaded\n');
+fwrite($handle, "PHP required files loaded\n");
 
 class cron_handler extends request_handler {
 
@@ -34,7 +34,7 @@ class cron_handler extends request_handler {
 
     }
 }
-fwrite($handle, 'PHP Klasse  gegeladen\n');
+fwrite($handle, "php class loaded\n");
 
 
 $initialize = new cron_handler();
