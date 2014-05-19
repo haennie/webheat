@@ -5,6 +5,7 @@ fwrite($handle, 'PHP File gestartet\n');
 require_once '../include/system/config.php';
 require_once 'api_class.php';
 
+fwrite($handle, 'PHP required files loaded\n');
 
 class cron_handler extends request_handler {
 
