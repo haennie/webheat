@@ -1,11 +1,8 @@
 <?php
-$handle = fopen('cron_log.txt', 'a');
-fwrite($handle, "PHP File gestartet\n");
 
 require_once '/var/www/webheat/include/system/config.php';
 require_once '/var/www/webheat/api/api_class.php';
 
-fwrite($handle, "PHP required files loaded\n");
 
 class cron_handler extends request_handler {
 
@@ -34,13 +31,8 @@ class cron_handler extends request_handler {
 
     }
 }
-fwrite($handle, "php class loaded\n");
-
 
 $initialize = new cron_handler();
-
-fwrite($handle, 'durchgeführt\n');
-
 sleep(30);
 $init_2 = new cron_handler();
 
