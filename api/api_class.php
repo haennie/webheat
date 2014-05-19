@@ -4,10 +4,10 @@
 	 */
 	class request_handler {
 		
-		private $current_temp;
-		private $requested_temp;
-		private $humidity;
-        private $oven_status;
+		public  $current_temp;
+		public $requested_temp;
+		public $humidity;
+        public $oven_status;
 		
 		function request_handler() {
 			
