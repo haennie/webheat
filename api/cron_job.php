@@ -11,6 +11,8 @@ class cron_handler extends request_handler {
 
         parent::get_sensor_values();
 
+        $this->check_temp();
+
     }
 
     function check_temp() {
