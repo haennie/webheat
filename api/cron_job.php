@@ -1,5 +1,7 @@
 <?php
-error_log('cronjob ausgeführt oben');
+$handle = fopen('cron_log.txt', 'a');
+fwrite($handle, 'PHP File gestartet\n');
+
 require_once '../include/system/config.php';
 require_once 'api_class.php';
 
@@ -31,8 +33,13 @@ class cron_handler extends request_handler {
 
     }
 }
-error_log('cronjob ausgeführt unten');
+fwrite($handle, 'PHP Klasse  gegeladen\n');
+
+
 $initialize = new cron_handler();
+
+fwrite($handle, 'durchgeführt\n');
+
 sleep(30);
 $init_2 = new cron_handler();
 
